@@ -36,8 +36,8 @@ html{
 
 header{
     width: 100%;
-    padding: 40px 4%;
-    position: fixed;
+    padding: 10px 4%;
+    position:relative;
     top: 0;
     left: 0;
     transition: .7s;
@@ -50,6 +50,7 @@ header.rolagem{
 
 header.rolagem button{
     background-color: #ade0ff;
+    transition: 2s;
 }
 
 header img{
@@ -68,6 +69,15 @@ header ul li{
 header ul li a{
     color: #333333;
     text-decoration: none;
+}
+
+header ul li a:hover {
+    color: #9d82cf;
+    border-color: #ade0ff;
+    border-style:groove;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .banner{
