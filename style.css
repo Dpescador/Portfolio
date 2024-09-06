@@ -99,14 +99,15 @@ header ul li a:hover {
 }
 
 
-.resumo{
+.resumo {
+    width: 100%;
+    max-width: 900px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 900px;
-    max-width: 1280px;
-    margin:auto;
+    align-items: center;
+    height: 700px;
 }
+
 
 .resumo__sobre{
     height: 150px;
@@ -126,12 +127,22 @@ header ul li a:hover {
   
 }
 
-.foto{
+.foto {
     background-color: #ffffff;
     width: 400px;
-    height: 400px;
+    height: 300px;
     border-radius: 2vh;
-    border-style: ridge;
+    overflow: hidden; /* Impede que a imagem extrapole o contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Mantém a imagem ajustada dentro da div */
+    border-radius: inherit; /* Herda o border-radius do container */
 }
 
 .resumo__cards{
@@ -142,27 +153,31 @@ justify-content: center;
 align-items: center;
 border-radius: 10px;
 text-align: center; 
+background-color: ;
 }
 
 .year{
-    height: 150px;
+    height: 100px;
     width: 150px;
     background-color: #a1e8fd;
     border-radius: 10px;
 }
 
 .bi{
-    height: 150px;
+    height: 100px;
     width: 150px;
     background-color: #a1e8fd;
     border-radius: 10px;
 }
 
 .program{
-    height: 150px;
+    height: 100px;
     width: 150px;
     background-color: #a1e8fd;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
 }
+
+
+
