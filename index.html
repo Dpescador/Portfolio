@@ -1,56 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Home</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header id="header">
-        <div class="container">
-            <div class="flex">
-                <a href="#"><img src="img/icon1.png" alt="Ícone"></a>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Menu A</a></li>
-                    <li><a href="#">Menu B</a></li>
-                    <li><a href="#">Menu C</a></li>
-                </ul>
-            </nav>
-                <div class="btn-contato">
-                    <a href="#"><button>Contato</button></a>
-                </div>            
-            </div><!--flex-->   
-           
-        </div><!--container-->
-   </header>
-
-   
-    <section class="banner">   
-        <div class="resumo">
+    <div class="hero">
+        <nav>
+            <img src="img/icon1.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Features</a></li>
+            </ul>
             <div>
-                <div class="resumo__sobre">
-                    <p class="hello">Olá, sou </p>
-                    <p class="hello">João da Silva</p>
-                    <p class="hello__resumo">Eu sou um Freelance UI/UX Designer e desenvolvedor morando em Londres, Inglaterra. 
-                    I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.
-                    </p>
-                </div>
-                <div class="resumo__cards">
-                    <div class="year"><p>2 Y.</p><p>Card 1</p></div>
-                    <div class="bi"><p>2 Y.</p><p>Card 2</p></div>
-                    <div class="program"><p>2 Y.</p><p>Card 3</p></div>
+                <a href="#" class="contato">Contato</a>
+            </div>
+        </nav>
+        <section class="zona1">
+            <div class="content">
+                <h1 class="anim">Hello!<br>I'm Spider-Man</h1>
+                <p class="anim">A receita de um esportivado não é nova. Em resumo, pegue um conjunto de spoilers ou para-choques mais esportivos, alguns adesivos, mudanças no interior e, no máximo, algum ajuste leve em suspensão e transmissão.</p>
+                <div class="cards-container anim">
+                    <div class="card">Card 1</div>
+                    <div class="card">Card 2</div>
+                    <div class="card">Card 3</div>
                 </div>
             </div>
-            <div class="foto">
-              <img class="imagem" src="img/Homem_aranha.jpg" alt="Ícone">
-            </div>
-        </div>
-    </section>
+            <img src="img/Homem_aranha.jpg" class="image-container anim">
+        
+        </section>
 
-    <script src="menu.js"></script>
-    
+        <section class="zona2">
+           
+        </section>
+  </div>
 </body>
 </html>

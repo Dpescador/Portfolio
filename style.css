@@ -2,182 +2,121 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
-:root {
-    /*cores*/
-    --amarelo: #FFC756;
-    --laranja: #F66139;
-    --lilas: #7F8FFE;
-    --verde: #56B78C;
-    --cinza-claro: #D9D9D9;
-    --cinza-escuro: #959595;
-
-    /*fontes*/
-    --fonte-primaria: 'Work Sans', sans-serif;
-    --fonte-secundaria: 'Fjalla One', sans-serif;
-}      
 
 html{
-    height: 500vh;
+    height: 500rem;
 }
 
-.container{
-    max-width: 1920px;
-    margin:auto;
-}
-
-.flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 46px;
-}
-
-header{
+.hero{
     width: 100%;
-    padding: 20px 4%;
-    position:fixed;
-    top: 0;
-    left: 0;
-    transition: .7s;
-}
-
-header.rolagem{
-    background-color: #f0f3f5;
-    padding: 20px 4%;
-}
-
-header.rolagem button{
-    background-color: #ade0ff;
-    transition: 2s;
-}
-
-header img{
-   width: 40px;
-}
-
-header ul{
-    list-style-type: none;
-}
-
-header ul li{
-    display: inline-block;
-    margin: 0 40px;
-}
-
-header ul li a{
-    color: #333333;
-    text-decoration: none;
-}
-
-header ul li a:hover {
-    color: #9d82cf;
-    border-color: #ade0ff;
-    border-style:groove;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-.banner{
-    height: 100vh;
-    background-image: url("./img/Homepage.jpg");
+    min-height: 100vh;
+    background-image: url(img/Homepage.jpg);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: absolute;
 }
 
-.btn-contato button{
-    width: 111px;
-    height: 48px;
-    border: 0;
-    background-color: rgba(246, 250, 250, 0.692);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-
-.resumo {
-    width: 100%;
-    max-width: 900px;
+nav{
+    padding:  10px 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    height: 700px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
 }
 
 
-.resumo__sobre{
-    height: 150px;
-    text-align: start;
-    font-family: 'Courier New', Courier, monospace;
+.contato{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881,#c430d7);
+    font-size:14px; 
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+
 }
 
-.hello{
-    font-size: 50px;
-    color: rgb(8, 65, 104);
-    font-weight: 900;
+.content{
+    margin-top: 10%;
+    max-width: 600px;
 }
 
-.hello__resumo{
-    font-size: 20px;
-    color: rgb(15, 15, 15);
-  
+.content h1{
+    font-size: 70px;
+    color: #222;
 }
 
-.foto {
-    background-color: #ffffff;
-    width: 400px;
-    height: 300px;
-    border-radius: 2vh;
-    overflow: hidden; /* Impede que a imagem extrapole o contêiner */
+.content p{
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+
+.contato:hover{
+    border-top-right-radius: 30px;
+}
+
+.image-container{
+    width: 530px;
+    position: absolute;
+    bottom: 100px;
+    right: 10%;
+}
+
+.image-container.anim{
+    animation-delay: 1.5s;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.cards-container {
+    display: flex; /* Alinha os cards em linha */
+    justify-content: space-between; /* Espaça os cards */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px; /* Adiciona um padding ao redor dos cards */
+    
+}
+
+.cards-container.anim{
+    animation-delay: 2s;
+} 
+
+.card {
+    flex: 1; /* Faz com que todos os cards tenham o mesmo tamanho */
+    min-width: 200px; /* Define uma largura mínima para os cards */
+    height: 100px; /* Define a altura dos cards */
+    background-color: rgb(211, 236, 227);
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px; /* Adiciona bordas arredondadas aos cards */
+    
 }
-
-.foto img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; /* Mantém a imagem ajustada dentro da div */
-    border-radius: inherit; /* Herda o border-radius do container */
-}
-
-.resumo__cards{
-display: flex;
-height: 300px;
-gap: 10vh;
-justify-content: center;
-align-items: center;
-border-radius: 10px;
-text-align: center; 
-background-color: ;
-}
-
-.year{
-    height: 100px;
-    width: 150px;
-    background-color: #a1e8fd;
-    border-radius: 10px;
-}
-
-.bi{
-    height: 100px;
-    width: 150px;
-    background-color: #a1e8fd;
-    border-radius: 10px;
-}
-
-.program{
-    height: 100px;
-    width: 150px;
-    background-color: #a1e8fd;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
